@@ -1,0 +1,24 @@
+:root {
+    --navigation-background: #353441;
+    --navigation-background-secondary: #3a3947;
+    --navigation-togglebutton-color: orangered;
+    --navigation-menu-fontcolor: #9dc6d1;
+    --navigation-hovercolor: orangered;
+    --navigation-text-hovercolor: #fff;
+    --main-bg-color: #e1e1e1; 
+    --loader-face-bg: #e1e1e1;
+    --loader-face-border: #121212;
+    --loader-face-color-outer: #ffff00;
+    --loader-face-color-outer-glow: rgba(255, 255, 0, 0.1);
+    --loader-face-color-inner: #03a9f4;
+    --loader-face-color-inner-glow: rgba(3, 169, 244, 0.1);
+    --table-header-bg: #009898;
+    --table-header-color: #fff;
+    --table-header-bg-hover: #007777;
+    --table-row-odd: rgba(255, 255, 255, 0.75);
+    --table-row-even: rgba(0, 0, 0, 0.05);
+    --table-row-selected: rgba(0, 152, 152, 0.15);
+    --table-row-hover: rgba(0, 152, 152, 0.15);
+    --table-row-highlightedborder: #009897;
+    --button-disabled: #bdbdbd;
+}

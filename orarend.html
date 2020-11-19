@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órarend tervező - Alpha 0.0.1</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/orarend.css">
+
+    <!-- Scripts -->
+    <script type="module" defer src="assets/js/orarend.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="orarend__navcontainer">
+            <nav class="orarend__navbar">
+                <div class="orarend__pagetitle">Tervező</div>
+                <ul>
+                    <li onclick="window.location.href='index.html'">Nyitólap</li>
+                    <li onclick="window.location.href='lista.html?page=tanarok'">Tanárok</li>
+                    <li onclick="window.location.href='lista.html?page=szakok'">Szakok</li>
+                    <li onclick="window.location.href='lista.html?page=targyak'">Tárgyak</li>
+                    <li onclick="window.location.href='lista.html?page=termek'">Tantermek</li>
+                    <li onclick="window.location.href='orarend.html'">Órarend</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mainpage">
+
+
+
+        <div class="oraszerkeszto__modal ishidden" id="oraszerkeszto-modal">
+            <div class="modal__container">
+                <div class="modal__leftside"></div>
+                <div class="modal__body">
+                    <h2 id="modal-targynev">Tárgy neve</h2>
+                    <h4 id="modal-targykod">Tárgykód</h4>
+                    <div class="modal__body-divider"></div>
+                    <div class="modal__inputfield">
+                        <label for="oktatok">Oktató: </label>
+                        <select name="oktatok" id="cbx-oktatok">
+                        </select>
+                    </div>
+                    <div class="modal__inputfield">
+                        <label for="idotartam">Időtartam: </label>
+                        <input type="number" name="idotartam" id="num-idotartam" min="1" max="12" value=2>
+                    </div>
+                    <div class="modal__buttonrow">
+                        <div class="modal-btn" id="btn-mentes">Mentés</div>
+                        <div class="modal-btn" id="btn-megse">Mégse</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="orarend__schedule">
+
+            <div class="orarend__tervezo">
+                <div class="top__buttonrow">
+                    <div class="modal-btn" id="btn-elozohet">Előző hét</div>
+                    <div class="modal-btn" id="btn-kovetkezohet">Következő hét</div>
+                </div>
+                <div class="orarend__idovonal">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="idovonal__idooszlop"></th>
+                                <th class="idovonal__naposzlop">Csütörtök<br><span class="idovonal__datum">február
+                                        6</span></th>
+                                <th class="idovonal__naposzlop">Péntek<br><span class="idovonal__datum">február
+                                        7</span></th>
+                                <th class="idovonal__naposzlop">Szombat<br><span class="idovonal__datum">február
+                                        8</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="idovonal__idooszlop">08:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">08:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">09:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">09:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">10:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">10:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">11:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">11:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">12:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">12:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">13:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">13:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">14:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">14:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">15:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">15:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">16:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">16:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">17:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">17:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">18:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">18:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">19:00</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                            <tr>
+                                <td class="idovonal__idooszlop">19:30</td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                                <td class="idovonal__naposzlop dragtarget"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="orarend__targyak">
+            <h2>Tárgyak</h2>
+
+            <div class="targyak__filter-targy">
+                <input type="text" name="filter" id="txt-filter" required>
+                <label>Filter...</label>
+                <span></span>
+            </div>
+
+            <div class="targyak__filter-szak">
+                <select name="filter-szak" id="cbx-filterszak"></select>
+            </div>
+
+            <div class="targyak__lista">
+
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

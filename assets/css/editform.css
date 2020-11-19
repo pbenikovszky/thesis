@@ -1,0 +1,144 @@
+.orarendtervezo__editform {
+    margin: 25px 0;
+    position: relative;
+    padding: 10px;
+}
+
+.orarendtervezo__editform h2 {
+    color: #999;
+    margin-bottom: 45px;
+}
+
+.orarendtervezo__editform .editform__inputfield {
+    position: relative;
+    height: 40px;
+    width: 60%;
+    margin-bottom: 25px;
+}
+
+.orarendtervezo__editform .editform__inputfield input[type='text'] {
+    position: absolute;
+    background: transparent;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #222;
+    width: 100%;
+}
+
+.orarendtervezo__editform .editform__inputfield label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #555;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.orarendtervezo__editform
+    .editform__inputfield
+    input[type='text']:focus
+    + label,
+.orarendtervezo__editform
+    .editform__inputfield
+    input[type='text']:valid
+    + label {
+    transform: translateY(-25px);
+    font-size: 14px;
+}
+
+.orarendtervezo__editform .editform__inputfield span {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    display: block;
+    background-color: #bbb;
+    height: 2px;
+    width: 100%;
+}
+
+.orarendtervezo__editform .editform__inputfield span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--table-header-bg);
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+
+.orarendtervezo__editform
+    .editform__inputfield
+    input[type='text']:focus
+    ~ span:before,
+.orarendtervezo__editform
+    .editform__inputfield
+    input[type='text']:valid
+    ~ span:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.orarendtervezo__editform
+    .editform__inputfield
+    input[type='text']:not(:valid):not(:disabled)
+    ~ span:before {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: orangered;
+}
+
+/* checkbox styles  */
+
+.orarendtervezo__editform .editform__inputfield input[type='checkbox'] + label {
+    left: 60px;
+}
+
+.orarendtervezo__editform .editform__inputfield input[type='checkbox'] {
+    position: absolute;
+    top: -3px;
+    height: 24px;
+    width: 48px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 12px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.orarendtervezo__editform .editform__inputfield input:checked[type='checkbox'] {
+    background: var(--table-header-bg);
+}
+
+.orarendtervezo__editform .editform__inputfield input[type='checkbox']:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.orarendtervezo__editform
+    .editform__inputfield
+    input:checked[type='checkbox']:before {
+    left: 24px;
+}
+
+.orarendtervezo__editform
+    .editform__inputfield
+    input[type='checkbox']:not(:disabled)
+    ~ span:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}

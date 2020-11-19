@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "megnevezes": "1. Programtervező informatikus BSc",
+        "aktiv": 1
+    },
+    {
+        "id": 2,
+        "megnevezes": "2. Programtervező informatikus BSc",
+        "aktiv": 1
+    },
+    {
+        "id": 3,
+        "megnevezes": "3. Programtervező informatikus BSc",
+        "aktiv": 1
+    },
+    {
+        "id": 4,
+        "megnevezes": "1. Mérnök informatikus BSc BSc",
+        "aktiv": 1
+
+    },
+    {
+        "id": 5,
+        "megnevezes": "2. Mérnök informatikus BSc",
+        "aktiv": 1
+
+    },
+    {
+        "id": 6,
+        "megnevezes": "3. Mérnök informatikus BSc",
+        "aktiv": 1
+
+    }           
+]

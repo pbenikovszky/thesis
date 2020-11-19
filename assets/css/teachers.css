@@ -1,0 +1,79 @@
+/* Edit form */
+
+.teachers__editform {
+    margin: 25px 0;
+    position: relative;
+    padding: 10px;
+}
+
+.teachers__editform h2 {
+    color: #999;
+    margin-bottom: 45px;
+}
+
+.teachers__editform .editform__inputfield {
+    position: relative;
+    height: 40px;
+    width: 60%;
+    margin-bottom: 25px;
+}
+
+.teachers__editform .editform__inputfield input[type='text'] {
+    position: absolute;
+    background: transparent;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #222;
+}
+
+.teachers__editform .editform__inputfield label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #555;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.teachers__editform .editform__inputfield input[type='text']:focus + label,
+.teachers__editform .editform__inputfield input[type='text']:valid + label {
+    transform: translateY(-25px);
+    font-size: 14px;
+}
+
+.teachers__editform .editform__inputfield span {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    display: block;
+    background-color: #bbb;
+    height: 2px;
+    width: 100%;
+}
+
+.teachers__editform .editform__inputfield span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--table-header-bg);
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+
+.teachers__editform
+    .editform__inputfield
+    input[type='text']:focus
+    ~ span:before,
+.teachers__editform
+    .editform__inputfield
+    input[type='text']:valid
+    ~ span:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}

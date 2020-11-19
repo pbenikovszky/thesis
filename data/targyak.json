@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "targykod": "ILBPM0418",
+        "nev": "A mesterséges intelligencia alapjai",
+        "tipus": "előadás",
+        "ajanlott_felev": 1,
+        "szak": 1,
+        "aktiv": 1
+    },
+    {
+        "id": 2,
+        "targykod": "ILBPM0418",
+        "nev": "A mesterséges intelligencia alapjai",
+        "tipus": "gyakorlat",
+        "ajanlott_felev": 1,
+        "szak": 1,
+        "aktiv": 1
+    },
+    {
+        "id": 3,
+        "targykod": "ILBPM0420",
+        "nev": "Szoftverfejlesztés",
+        "tipus": "előadás",
+        "ajanlott_felev": 4,
+        "szak": 1,
+        "aktiv": 1
+    },
+    {
+        "id": 4,
+        "targykod": "ILBGM0209",
+        "nev": "Mikroökonómia",
+        "tipus": "előadás",
+        "ajanlott_felev": 1,
+        "szak": 3,
+        "aktiv": 0
+    },
+    {
+        "id": 5,
+        "targykod": "ILBGM0211",
+        "nev": "Adatszerkezetek és algoritmusok",
+        "tipus": "előadás",
+        "ajanlott_felev": 5,
+        "szak": 4,
+        "aktiv": 1
+    },
+    {
+        "id": 6,
+        "targykod": "ILBGM0208",
+        "nev": "Gazdasági matematika 2",
+        "tipus": "gyakorlat",
+        "ajanlott_felev": 1,
+        "szak": 2,
+        "aktiv": 1
+    }
+]

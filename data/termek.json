@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "IK-214",
+        "number": "IK-214",
+        "capacity": 20,
+        "computers": 1
+    },
+    {
+        "id": 2,
+        "name": "Nagy IK előadó",
+        "number": "IK-201",
+        "capacity": 200,
+        "computers": 0
+    },
+    {
+        "id": 3,
+        "name": "IK-105",
+        "number": "IK-105",
+        "capacity": 20,
+        "computers": 1
+    },
+    {
+        "id": 4,
+        "name": "IK-106",
+        "number": "IK-106",
+        "capacity": 20,
+        "computers": 1
+    },
+    {
+        "id": 5,
+        "name": "IK-F05",
+        "number": "IK-F05",
+        "capacity": 20,
+        "computers": 1
+    },
+    {
+        "id": 6,
+        "name": "IK Földszint nagyelőadó",
+        "number": "IK-F02",
+        "capacity": 100,
+        "computers": 0
+    }
+]

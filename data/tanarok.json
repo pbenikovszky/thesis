@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "nev": "Pánovics János",
+        "szoba": "IK-214",
+        "email": "panovics.janos@inf.unideb.hu",
+        "telefon": "+36-52/593-294"
+    },
+    {
+        "id": 2,
+        "nev": "Kósa Márk",
+        "szoba": "IK-213",
+        "email": "kosa.mark@inf.unideb.hu",
+        "telefon": "+36-52/593-293"
+    },
+    {
+        "id": 3,
+        "nev": "Várterész Magda",
+        "szoba": "IK-212",
+        "email": "varteresz.magda@inf.unideb.hu",
+        "telefon": "+36-52/593-292"
+    },
+    {
+        "id": 4,
+        "nev": "Dr. Juhász István",
+        "szoba": "IK-211",
+        "email": "juhasz.pici@inf.unideb.hu",
+        "telefon": "+36-52/593-291"
+    },
+    {
+        "id": 5,
+        "nev": "Kádek Tamás",
+        "szoba": "IK-210",
+        "email": "kadek.tamas@inf.unideb.hu",
+        "telefon": "+36-52/593-290"
+    },
+    {
+        "id": 6,
+        "nev": "Péter, a rettenet",
+        "szoba": "IK-209",
+        "email": "peter@rette.net",
+        "telefon": "+36-52/593-190"
+    }
+]

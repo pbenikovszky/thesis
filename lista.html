@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanárok -- Órarend tervező - Alpha 0.0.1</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/tables.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/editform.css">
+
+    <!-- Scripts -->
+    <script defer src="assets/js/navigation.js"></script>
+    <script type="module" defer src="assets/js/listpages.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav id="menu__main" class="menu--active">
+            <div id="btn-toggle-navigation" class="menu__toggle-button opened">
+                <div class="menu__toggle-burger"></div>
+            </div>
+            <ul>
+                <li onclick="window.location.href='index.html'">Nyitólap</li>
+                <li onclick="window.location.href='lista.html?page=tanarok'">Tanárok</li>
+                <li onclick="window.location.href='lista.html?page=szakok'">Szakok</li>
+                <li onclick="window.location.href='lista.html?page=targyak'">Tárgyak</li>
+                <li onclick="window.location.href='lista.html?page=termek'">Tantermek</li>
+                <li onclick="window.location.href='orarend.html'">Órarend</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Loader  -->
+    <div class="loader" id="loader">
+        <div class="loader__face loader__face--face1">
+            <div class="circle"></div>
+        </div>
+        <div class="loader__face loader__face--face2">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <main id="main-content" class='ishidden'>
+        <section class="orarendtervezo__table-container ishidden" id="list-table">
+            <table class="orarendtervezo__table">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody id="listtable__tablebody">
+                </tbody>
+            </table>
+
+            <div class="orarendtervezo__editform">
+                <h2>Szerkesztés</h2>
+                <form id="listpage-editform"></form>
+            </div>
+
+        </section>
+
+        <div class="button-row">
+            <div class="table-btn" id="btn-export">Export</div>
+            <div class="table-btn" id="btn-import">Import</div>
+        </div>
+
+
+        <div id="csv-import-modal" class="orarendtervezo__modal ishidden">
+            <div class="orarendtervezo__modal-content">
+                <div class="orarendtervezo__modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Tanárok importálása</h2>
+                </div>
+                <div class="orarendtervezo__modal-body">
+                    <input type="file" name="" id="uploaded-file">
+                    <label for="uploaded-file" class="table-btn" id="btn-select-file">File kiválasztása</label>
+                    <span class="selected-filename">Még nem választott fájlt.</span>
+                    <span class="table-btn disabled" id="btn-upload-file">Importálás</span>
+
+                    <div class="dropzone" id="dropzone">
+                        Húzd ide a fájlt a feltöltéshez
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

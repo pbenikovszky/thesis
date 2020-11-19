@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "targy_id": 1,
+        "datum": "2020-05-07",
+        "kezdes": 8,
+        "vege": 12,
+        "terem_id": 1,
+        "oktato_id": 2
+    },
+    {
+        "id": 2,
+        "targy_id": 2,
+        "datum": "2020-05-08",
+        "kezdes": 10,
+        "vege": 16,
+        "terem_id": 1,
+        "oktato_id": 4
+    },
+    {
+        "id": 3,
+        "targy_id": 3,
+        "datum": "2020-05-07",
+        "kezdes": 14,
+        "vege": 16,
+        "terem_id": 1,
+        "oktato_id": 2
+    },
+    {
+        "id": 4,
+        "targy_id": 5,
+        "datum": "2020-05-15",
+        "kezdes": 12,
+        "vege": 16,
+        "terem_id": 1,
+        "oktato_id": 2
+    },
+    {
+        "id": 5,
+        "targy_id": 6,
+        "datum": "2020-05-09",
+        "kezdes": 8,
+        "vege": 10,
+        "terem_id": 1,
+        "oktato_id": 6
+    },
+    {
+        "id": 6,
+        "targy_id": 5,
+        "datum": "2020-05-14",
+        "kezdes": 8,
+        "vege": 12,
+        "terem_id": 1,
+        "oktato_id": 5
+    }
+]

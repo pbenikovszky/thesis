@@ -1,0 +1,101 @@
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: var(--main-bg-color);
+}
+
+.loader .loader__face {
+    position: absolute;
+    border: 2px solid var(--loader-face-border);
+}
+
+.loader .loader__face.loader__face--face1 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--loader-face-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border-left: 2px solid var(--loader-face-color-outer);
+    border-top: 2px solid var(--loader-face-color-outer);
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    animation: rotateCircle 3s linear infinite; 
+}
+
+.loader .loader__face.loader__face--face2 {
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background-color: var(--loader-face-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border-right: 2px solid var(--loader-face-color-inner);
+    border-bottom: 2px solid var(--loader-face-color-inner);
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent; 
+    animation: rotateCircle 3s linear infinite reverse; 
+}
+
+.loader .loader__face .circle {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    transform-origin: left;
+}
+
+.loader .loader__face.loader__face--face1 .circle {
+    transform: rotate(-45deg);
+}
+
+.loader .loader__face.loader__face--face2 .circle {
+    transform: rotate(-45deg);
+}
+
+.loader .loader__face .circle:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    top: -4px;
+    right: -6px;
+}
+
+.loader .loader__face.loader__face--face1 .circle:before {
+    background-color: var(--loader-face-color-outer);
+    box-shadow: 0 0 20px var(--loader-face-color-outer),
+                0 0 40px var(--loader-face-color-outer),
+                0 0 60px var(--loader-face-color-outer),
+                0 0 80px var(--loader-face-color-outer),
+                0 0 100px var(--loader-face-color-outer),
+                0 0 5px var(--loader-face-color-outer-glow);
+}
+
+.loader .loader__face.loader__face--face2 .circle:before {
+    background-color: var(--loader-face-color-inner);
+    box-shadow: 0 0 20px var(--loader-face-color-inner),
+                0 0 40px var(--loader-face-color-inner),
+                0 0 60px var(--loader-face-color-inner),
+                0 0 80px var(--loader-face-color-inner),
+                0 0 100px var(--loader-face-color-inner),
+                0 0 5px var(--loader-face-color-inner-glow);
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}

@@ -1,0 +1,103 @@
+
+
+nav {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16em;
+    background-color: var(--navigation-background);
+    transform: translateX(-16em);
+    transition: transform 500ms ease-out;
+}
+
+nav.menu--active {
+    transform: translateX(0);
+}
+
+nav .menu__toggle-button {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -65px;
+    height: 60px;
+    width: 65px;
+    background-color: var(--navigation-background);
+    color: var(--navigation-togglebutton-color);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 150ms linear, color 150ms linear;
+}
+
+nav .menu__toggle-button:hover {
+    background-color: var(--navigation-togglebutton-color);
+}
+
+nav .menu__toggle-button .menu__toggle-burger {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;}
+
+nav .menu__toggle-button .menu__toggle-burger:before,
+nav .menu__toggle-button .menu__toggle-burger:after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .menu__toggle-button .menu__toggle-burger:before {
+    transform: translateY(-8px);
+}
+
+nav .menu__toggle-button .menu__toggle-burger:after {
+    transform: translateY(8px);
+}
+
+nav .menu__toggle-button.opened .menu__toggle-burger {
+    background: transparent;
+}
+
+nav .menu__toggle-button.opened .menu__toggle-burger:before {
+    transform: rotate(45deg);
+}
+
+nav .menu__toggle-button.opened .menu__toggle-burger:after {
+    transform: rotate(-45deg);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 1em;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: var(--navigation-background);
+    color: var(--navigation-menu-fontcolor);    
+    transition: all 250ms ease-in;
+    cursor: pointer;
+    user-select: none;
+}
+
+nav li:nth-of-type(2n) {
+    background-color: var(--navigation-background-secondary);
+}
+
+nav li:hover {
+    background-color: var(--navigation-hovercolor);
+    color: var(--navigation-text-hovercolor);
+}

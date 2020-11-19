@@ -1,0 +1,382 @@
+:root {
+    --nav-font-color: #edf0f1;
+    --nav-font-hover: #222;
+    --orarend-oszlop-szel: 250px;
+    --modal-body-bg: #fcfcfc;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--table-header-bg);
+    padding: 30px 10%;
+    display: flex;
+    align-items: center;
+}
+
+.orarend__navcontainer {
+    margin: 0 auto;
+    width: 75%;
+    /* z-index: 999; */
+}
+
+.orarend__pagetitle {
+    font-size: 1.5em;
+}
+
+.orarend__navbar {
+    display: flex;
+    align-items: center;
+}
+
+.orarend__navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.orarend__navbar ul li {
+    color: var(--nav-font-color);
+    text-decoration: none;
+    padding: 0px 20px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.orarend__navbar ul li:hover {
+    color: var(--nav-font-hover);
+}
+
+/* MAIN PAGE */
+
+.mainpage {
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+}
+
+/* TERVEZŐ */
+
+.orarend__schedule {
+    width: 80%;
+    padding: 30px;
+}
+
+.orarend__schedule h2 {
+    margin-bottom: 30px;
+}
+
+.orarend__tervezo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.idovonal__idooszlop {
+    width: 50px;
+}
+
+.idovonal__naposzlop {
+    width: 300px;
+}
+
+.orarend__idovonal table {
+    border-collapse: collapse;
+}
+
+.orarend__idovonal .idovonal__datum {
+    font-size: 0.75rem;
+}
+
+.orarend__idovonal th,
+.orarend__idovonal td {
+    height: 50px;
+    border-top: 1px solid #acacac;
+    border-right: 1px solid #acacac;
+}
+
+.orarend__idovonal tr:last-of-type td {
+    border-bottom: 1px solid #acacac;
+}
+
+.orarend__idovonal td {
+    vertical-align: top;
+    font-size: 0.85rem;
+}
+
+.orarend__idovonal th:first-of-type,
+.orarend__idovonal tr td:first-of-type {
+    border-top: none;
+}
+
+.orarend__idovonal th {
+    border-right: 1px solid #acacac;
+}
+
+.orarend__idovonal tbody tr:nth-child(even) td:first-of-type {
+    visibility: hidden;
+}
+
+.orarend__idovonal td.dragover {
+    background-image: repeating-linear-gradient(
+        45deg,
+        #ccc 0,
+        #ccc 2px,
+        transparent 0,
+        transparent 50%
+    );
+    background-size: 10px 10px;
+}
+
+/* Óra kártya */
+
+.orarend__esemenyek {
+    position: absolute;
+    width: 950px;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+.orarend__esemenyek.disabled {
+    pointer-events: none;
+}
+
+.ora__kartya,
+.targy__kartya {
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    /* width: 100%; */
+    width: 300px;
+    min-height: 50px;
+    background-color: var(--table-header-bg);
+    color: #efefef;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5),
+        inset 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.targy__kartya .ora__kod {
+    font-size: 0.75rem;
+}
+
+.targy__kartya.draggable {
+    cursor: move;
+}
+
+.targy__kartya.dragging {
+    opacity: 0.5;
+}
+
+/* TÁRGYAK LISTA  */
+
+.orarend__targyak {
+    width: 25%;
+    border-left: 1px solid black;
+    padding-top: 30px;
+    text-align: left;
+}
+
+.orarend__targyak h2 {
+    text-align: center;
+}
+
+.targyak__lista {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px 15px 0 15px;
+    max-height: 800px;
+    overflow-y: scroll;
+    position: sticky;
+    top: 10px;
+}
+
+.targyak__lista .targy__kartya {
+    position: relative;
+    margin: 10px 0;
+}
+
+.targyak__lista::-webkit-scrollbar-thumb {
+    border-radius: 0 10px 10px 0;
+    width: 8px;
+    background-color: #a7a7a7;
+}
+
+.targyak__lista::-webkit-scrollbar {
+    border-radius: 0 10px 10px 0;
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Filter styles */
+
+.orarend__targyak .targyak__filter-targy {
+    position: relative;
+    height: 40px;
+    width: 75%;
+    /* margin-bottom: 25px; */
+    margin: 15px 20px;
+}
+
+.orarend__targyak .targyak__filter-targy input[type='text'] {
+    position: absolute;
+    background: transparent;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #222;
+    width: 100%;
+}
+
+.orarend__targyak .targyak__filter-targy label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #555;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.orarend__targyak .targyak__filter-targy input[type='text']:focus + label,
+.orarend__targyak .targyak__filter-targy input[type='text']:valid + label {
+    transform: translateY(-25px);
+    font-size: 14px;
+}
+
+.orarend__targyak .targyak__filter-targy span {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    display: block;
+    background-color: #bbb;
+    height: 2px;
+    width: 100%;
+}
+
+.orarend__targyak .targyak__filter-targy span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--table-header-bg);
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+
+.orarend__targyak .targyak__filter-targy input[type='text']:focus ~ span:before,
+.orarend__targyak
+    .targyak__filter-targy
+    input[type='text']:valid
+    ~ span:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.orarend__targyak .targyak__filter-szak {
+    margin: 15px 20px;
+}
+
+/* ÓRASZERKESZTŐ MODAL */
+
+.oraszerkeszto__modal {
+    background: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container {
+    width: 700px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+}
+
+.modal__leftside {
+    height: 100%;
+    width: 100px;
+    background-color: var(--table-header-bg);
+}
+
+.modal__body {
+    width: 600px;
+    height: 100%;
+    background-color: var(--modal-body-bg);
+    text-align: left;
+    padding: 30px;
+    position: relative;
+}
+
+.modal__body h2 {
+    margin-bottom: 10px;
+}
+
+.modal__body-divider {
+    width: 80%;
+    height: 2px;
+    margin: 20px auto;
+    background-color: #ccc;
+}
+
+.modal__inputfield {
+    margin-bottom: 20px;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.modal__buttonrow {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+.modal-btn {
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+    border-radius: 5px;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
+    user-select: none;
+    cursor: pointer;
+    transition: 200ms background-color linear;
+}
+
+.modal-btn:hover:not(:disabled) {
+    background-color: var(--table-header-bg-hover);
+}
+
+.modal-btn:disabled {
+    background-color: var(--button-disabled);
+}
+
+.modal-btn:disabled:hover {
+    cursor: not-allowed;
+}
+
+/* HIDDEN */
+
+.ishidden {
+    display: none;
+}
